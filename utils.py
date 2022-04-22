@@ -48,7 +48,7 @@ def search_for_posts(query):
     for index in data:
         if query.lower() in remove_from_string(index['content'].lower(), '!',".",',','-',':').split(' '):
             list_contents.append(index)
-    return list_contents
+    return list_contents[:10]
 
 
 def get_post_by_pk(pk):
